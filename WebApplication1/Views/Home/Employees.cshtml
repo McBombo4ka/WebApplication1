@@ -1,0 +1,30 @@
+@using System.Web.Helpers;
+@{
+    ViewBag.Title = "Сотрудники";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Таблица сотрудников</p>
+
+<div id="grid">
+
+    @{
+        var grid = new System.Web.Helpers.WebGrid(WebApplication1.App_Code.DAL.DataAccessor.SelectUsers(), rowsPerPage: 5,
+                        defaultSort: "NameUser");
+    }
+
+    @grid.GetHtml(tableStyle: "webgrid",
+    headerStyle: "header",
+    alternatingRowStyle: "alt",
+    columns: grid.Columns(
+    grid.Column("idUser", "UserID"),
+    grid.Column("IdPosition", "ID должности"),
+    grid.Column("NameUser", "Имя сотрудника"),
+    grid.Column("BirthDateUser", "Дата рождения"),
+    grid.Column("PhoneNumber", "Номер телфеона"),
+    grid.Column("Email", "Электронная почта"),
+    grid.Column("AgeUser", "Возраст"),
+    grid.Column("GenderUser", "Пол")
+    ))
+</div>

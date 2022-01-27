@@ -1,0 +1,58 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.webgrid {
+    margin: 4px;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.header {
+    padding: 6px 5px;
+    text-align: center;
+    background-color: #e8eef4;
+    border-bottom: 2px solid #3966A2;
+    height: 40px;
+    font-weight: bold;
+    border-top: 2px solid #D6E8FF;
+    border-left: 2px solid #D6E8FF;
+    border-right: 2px solid #D6E8FF;
+}
+
+.webgrid th, .webgrid td {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+
+.alt {
+    background-color: #E8E8E8;
+    color: #000;
+}
+
+.product {
+    width: 50px;
+    font-weight: bold;
+} 
